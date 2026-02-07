@@ -14,3 +14,10 @@ All analysis is performed without GROUP BY in final outputs.
 - PostgreSQL
 - pgAdmin 4
 - Git & GitHub
+
+##🧩 PROJECT RULES (Important)
+
+- No GROUP BY in final queries
+- Use ROW_NUMBER, RANK, DENSE_RANK, SUM OVER, COUNT OVER, LAG, AVG OVER
+- Use CTEs for clarity
+- PostgreSQL syntax
