@@ -7,7 +7,7 @@ This document summarizes key business insights derived using PostgreSQL window f
 ## Module 1: Latest Order per Customer
 
 ### Insight -1 
-Here we find out the latest orders per customer by USING window Function ROW_Number() only 
+Here find out the latest orders per customer by USING window Function ROW_Number() only 
 
 #### Learnings : 
  Window Function ROW_num() add serial number to every customer order according to the customer_id 
@@ -19,7 +19,7 @@ Here we find out the latest orders per customer by USING window Function ROW_Num
  ## Module 2: Top 3 Customers by Total Sales (With Ties)
 
  ### Insight -2
- Here we find out the top 3 customer by total sales using Sum() Over() window function
+ Here find out the top 3 customer by total sales using Sum() Over() window function
 
  #### Learnings :
 
@@ -27,3 +27,13 @@ Here we find out the latest orders per customer by USING window Function ROW_Num
  which stop collapsing of row and keep every detail
  Group By is using mandatory when usign only aggregate function SUM()
  on the other hand CTEs using window functions doesn't need GROUP BY because window functions compute aggregates over partitions while preserving row-level detail, whereas GROUP BY collapses rows.
+
+ ## Module 3: Runnine Total of Sales
+
+ ### Insight -3 
+ Here find out how much sales is running till present period.
+
+ #### Learning :
+ Today's key lesson was learning the difference of using DISTINCT in NON-CTE and CTE as both produce different results. 
+ CTE worked as a whole thats' why distinct treat the Content under CTE as a one column on the other hand in NON CTE the columns are considered as separate
+ Data and get removed by distinct so the row is already reduced when it will reach the desired column in resulty many data will be deleted.
