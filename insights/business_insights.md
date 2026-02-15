@@ -50,3 +50,13 @@ sum then Lag it is important to know the fact that both function uses column ali
 SQL processes expressions at the same level simultaneously, so monthly_total does not yet exist when LAG() tries to use it.
 that's why we need CTE to establish the sum() window fuction as it is the main thing to see and then work with the lag() function separately
 same would be applicable for sum() as aggregated function.
+
+### Insight -5
+Here find out the First & Last Purchase per Customer using First() and Last() window function
+
+#### Learnings :
+CTE works like a temporary table or database like you took what you need from a the main database and turn that into a separtae database
+and all the sql rules apply on that temporary database also. If you are using multiple CTE you have to tread like seperate tables and have to use
+Join to make a connection among two CTE's.
+CTE usulally used so that in vast database so we can take out the columns we need and work around them but if we use Select * inside the 
+CTE then we can bring any column from the main database we want beside the Aliases.
